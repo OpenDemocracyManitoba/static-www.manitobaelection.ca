@@ -105,6 +105,15 @@ Only the external Font Awesome stylesheet keeps a `?ver=`. The transform only re
 
 **For the hosting phase:** 301 `?pagenum=N` (alone or alongside other parameters) to `…/page/N/` (`N=1` → the bare path), and http → https. Query strings on assets need no rule.
 
+## Old-host links rewritten
+
+In Phase B of the olddroplet migration (R3, 2026-10-24), `python3 -I rewrite_links.py www.manitobaelection.ca --apply` rewrote 6 links in 3 files from `http://www.manitobaelection.ca/…` to `https://www.manitobaelection.ca/…`. Only links whose target is in `site/` were changed:
+
+* `/about-manitobaelection-ca/` (2)
+* `/frequently-asked-questions/` (2)
+* `/press-mentions/` (1)
+* `/press-releases/` (1)
+
 ## Secret scan
 
 The Phase A §7.2 scan was run over `site/` and found nothing. It checks for:
