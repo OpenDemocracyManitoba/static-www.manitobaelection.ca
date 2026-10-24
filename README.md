@@ -2,7 +2,8 @@
 
 Static HTML copy of **www.manitobaelection.ca**, Open Democracy Manitoba's guide to the 2023 Manitoba provincial election. It ran on WordPress 5.9.7, with the ElectionData-V2 theme supplied by the Inform-Your-Vote-Wordpress-Plugin. It was crawled from olddroplet (`odm-nginx-ruby-php-2018`, 159.203.24.194) on 2026-10-24, before the server was retired. The apex `manitobaelection.ca` 301'd to this host.
 
-* `site/` holds the crawl: 1,838 files in the raw crawl commit.
+* `site/` holds the crawl: 1,799 files, after the transform commit described below.
+* `transform.py` is the script that made the second commit.
 * `crawl.log.gz` holds the wget log.
 
 The WordPress source (web root `/var/www/manitobaelection.ca/2023`), the DB dump (`2023_manitobaelection_ca`) and the nginx vhost are in the private repo `OpenDemocracyManitoba/archive-www.manitobaelection.ca`.
@@ -79,7 +80,30 @@ There were no references to `upcoming.manitobaelection.ca` or `159.203.24.194`.
 
 ## Commits and URL mapping
 
+The repo has two commits:
+
 1. **Raw crawl.** `--restrict-file-names=windows` saved each URL's `?` as `@`.
+2. **Path-based URLs** (owner decision, 2026-10-24), made by `python3 -I transform.py www.manitobaelection.ca --apply`:
+
+|Old URL (live site)|Crawl file (commit 1)|Now|
+|-|-|-|
+|`/candidates/<slug>/?pagenum=N#news`|`candidates/<slug>/index.html@pagenum=N.html`|`candidates/<slug>/page/N/index.html` (314 files; 35 candidates)|
+|`/parties/<slug>/?pagenum=N#news`|`parties/<slug>/index.html@pagenum=N.html`|`parties/<slug>/page/N/index.html` (211 files; 4 parties)|
+|`…/?pagenum=1#news`|`…/index.html@pagenum=1.html` (39 files)|dropped: identical to `…/index.html`, apart from cache comments|
+|`<file>?ver=X`|`<file>@ver=X`, `<file>@ver=X.css`|`<file>` (9 files; no plain copy existed)|
+
+No URL combines `pagenum` with another query parameter, so every pager link mapped cleanly. The `&pagenum=N` URLs in the server's access log weren't linked from any crawled page.
+
+The transform also rewrote the links in the HTML:
+* 6,144 pager links: `?pagenum=N` → `page/N/`, keeping `#news`, and `?pagenum=1` → the bare path.
+* 6,474 cache-buster query strings stripped, including the JSON-escaped emoji-loader URL.
+* 513 `<link rel='shortlink'>` tags removed.
+
+Only the external Font Awesome stylesheet keeps a `?ver=`. The transform only rewrites a link when its new target is in `site/`, and it never overwrites a file.
+
+**No `@` files are left.** An internal-link check finds **0 unresolved out of 133,587**. It covers every `https://www.manitobaelection.ca/…`, root-relative or `url()` reference, ignores the blocked `/wp-json` and `xmlrpc.php` links, and counts `/foo` → `foo.html` as resolved.
+
+**For the hosting phase:** 301 `?pagenum=N` (alone or alongside other parameters) to `…/page/N/` (`N=1` → the bare path), and http → https. Query strings on assets need no rule.
 
 ## Secret scan
 
