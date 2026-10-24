@@ -114,6 +114,16 @@ In Phase B of the olddroplet migration (R3, 2026-10-24), `python3 -I rewrite_lin
 * `/press-mentions/` (1)
 * `/press-releases/` (1)
 
+## External dependencies mirrored
+
+In Phase B of the olddroplet migration (R4, 2026-10-24), the stylesheets every page needs to render were copied into `site/_ext/` by `python3 -I mirror_deps.py www.manitobaelection.ca --apply`, and the pages now load the copies (root-relative links):
+
+* `https://use.fontawesome.com/releases/v5.1.1/css/all.css` → `/_ext/use.fontawesome.com/releases/v5.1.1/css/all.css` (794 HTML files), with its webfonts, byte-identical
+* `https://fonts.googleapis.com/css?family=Libre+Franklin%3A400%2C700` → `/_ext/fonts.googleapis.com/css/libre-franklin-400-700.css` (794 HTML files), with its `woff2` files; the CSS (fetched as a current Chrome) points at the copies under `/_ext/fonts.gstatic.com/`
+* the `dns-prefetch` hints for `fonts.googleapis.com` and `use.fontawesome.com` were removed (794 HTML files)
+
+Font Awesome Free is under the Font Awesome Free License (fonts SIL OFL 1.1, CSS MIT); Libre Franklin is under the SIL OFL 1.1. Other third-party scripts and embeds were left as they were.
+
 ## Secret scan
 
 The Phase A §7.2 scan was run over `site/` and found nothing. It checks for:
