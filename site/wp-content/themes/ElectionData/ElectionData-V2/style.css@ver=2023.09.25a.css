@@ -1,0 +1,2135 @@
+/*
+Theme Name: Election Data - V2
+Theme URI: http://opendemocracymanitoba.com/
+Author: Robert Burton
+Author URI: http://opendemocracymanitoba.com/
+Description: The Election Data theme is designed to display the candidates created by the Election Data plugin.
+Version: 1.0
+License: GNU General Public License
+License URI: license.txt
+Tags: election
+*/
+
+html, body, div, span, applet, object, iframe,
+p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+news, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-family: "Libre Franklin", sans-serif;
+	vertical-align: baseline; }
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0 0 0.5em 10px;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	font-family: "Libre Franklin", sans-serif; }
+	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+		font-family: "Libre Franklin", sans-serif; }
+
+footer, header, hgroup, menu, nav, section {
+	display: block; }
+
+body {
+	line-height: 1;
+	font-size: 14px;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: none; }
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0; }
+
+a {
+	color: #3b59bb;
+	text-decoration: none; }
+	a img {
+		border: none; }
+
+footer a:hover, .small a:hover, .map_nav a:hover, .minitile a:hover, a.hover_underline:hover, .breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+p {
+	margin-bottom: 1em;
+	margin-left: 10px; }
+
+
+#container {
+	  width: 960px;
+	  margin: 40px auto 0 auto; }
+
+footer {
+	line-height: 30px;
+  border-top: 60px solid rgba(161, 136, 163, 0.81);
+  margin-top: 3em;
+  padding-top: 20px;
+  padding-left: 10%;
+  padding-bottom: 2px;
+  clear: both;
+}
+
+
+#footer_left{
+		float: left;
+		width: 33%;
+		text-align: left;
+}
+
+#footer_center{
+	float: left;
+	width: 32%;
+	text-align: left;
+
+}
+
+#footer_right{
+	width: 33%;
+	float: left;
+}
+
+footer .site-info{
+  color: #777;
+	font-size: 13px;
+	text-align: left;
+  margin-top: 4em;
+	padding-bottom: 8px;
+	letter-spacing: 0.5px;
+}
+
+footer h3{
+    margin-left: 0;
+    margin-top: 1em;
+    font-size: 16px;
+    color: #222;
+}
+
+footer p{
+    margin-left: 0;
+		font-size: 16px;
+    padding-right: 1em;
+}
+
+.footer-menu{ max-height: 999px;
+overflow: hidden;}
+
+  header h1 {
+    margin-left: 0;
+    margin-top: 20px;
+    margin-bottom: 0.25em;
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    padding-right: 45px;
+    }
+
+  header h1 a {
+    color: #181719;
+  	}
+
+  header h2 {
+    font-weight: normal;
+    font-size: 16px;
+    color: #777;
+    margin: 0 0 1.5em 0;
+    padding-right: 45px;
+    font-family: "Libre Franklin", sans-serif;
+    font-style: italic; }
+
+.breadcrumbs {
+  margin-bottom: 40px;
+}
+
+#main {
+	margin-top: 1em; }
+	#main h2.title {
+		margin-top: 10px; }
+
+.hidden {
+	display: none; }
+
+.float-right{
+	float:right;
+}
+
+.float-left{
+	float:left;
+}
+
+.scroll{
+	overflow:scroll;
+}
+
+.flow_it {
+	  width: 100%;
+	  overflow: hidden;
+	  zoom: 1;
+	  margin-bottom: 1em; }
+
+.one_column, .two_columns, .three_columns, .two_columns_early_shrink {
+  margin: 10px;
+	float: left;
+	color: #333333;
+	line-height: 1.3; }
+	.one_column p, .two_columns p, .three_columns p, .two_columns_early_shrink p {
+		margin-bottom: 1em;
+		margin-left: 0; }
+	.one_column ul, .one_column ol, .two_columns ul, .two_columns ol, .three_columns ul, .three_columns ol, .two_columns_early_shrink ul, .two_columns_early_shrink ol {
+		margin-left: 2em;
+		margin-bottom: 1em; }
+	.one_column h1, .one_column h2, .one_column h3, .one_column h4, .two_columns h1, .two_columns h2, .two_columns h3, .two_columns h4, .three_columns h1, .three_columns h2, .three_columns h3, .three_columns h4, .two_columns_early_shrink h1, .two_columns_early_shrink h2, .two_columns_early_shrink h3, .two_columns_early_shrink h4 {
+		margin-bottom: 1em;
+		margin-left: 0; }
+	.two_columns_early_shrink p {
+    font-size: 1.1em;
+  }
+
+.three_columns {
+	width: 918px; }
+
+.two_columns {
+	width: 598px; }
+
+.two_columns_early_shrink {
+	width: 598px; }
+
+.one_column {
+	width: 278px; }
+
+.two_column_flow {
+	width: 640px;
+	float: left; }
+
+.one_column_flow {
+	width: 320px;
+	float: left; }
+
+.medium_row {
+	height: 350px; }
+
+.short_row {
+	height: 235px; }
+
+.news-article {
+	margin-bottom: 2em; }
+	.news-article h3 {
+		margin-bottom: 5px;
+    font-size: 1.3em;
+  }
+	.news-article .date {
+		margin-bottom: 1.1em; }
+	.news-article .summary {
+		font-size: 1.1em;
+    line-height: 1.4 }
+	.news-article .summary, .news-article .summary b, .news-article .summary em, .news-article .date {
+		font-family: Georgia, "Bitstream Charter", serif; }
+
+p.news-article-notice{
+	color: #666666;
+	font-size: 0.9em;
+	margin-bottom: 20px;
+	margin-top: -10px; }
+
+div.news-pagination a {
+  border: 1px solid grey;
+  background: #f5f7ff;
+  border-radius: .25rem;
+  padding: .25rem;
+}
+
+
+div.news-pagination a:hover {
+  text-decoration: underline;
+}
+.politician, .party {
+	margin: 10px;
+	width: 298px;
+	border: 1px solid #e4e4e4;
+  border-radius: 10px;
+	background-color: #eee;
+  font-size: 1.05em;
+	float: left;
+  overflow: hidden;
+  zoom: 1; }
+
+.politician.tall {
+  height: 320px;
+}
+
+.politician.short {
+  height: 260px;
+}
+
+.politician .head img {
+  border-radius: 50%; }
+
+.politician .head img, .party .head img {
+  border: 4px solid white;
+  background: white;
+  margin: 10px 0 0 10px; }
+
+.politician .head, .party .head {
+  border-radius: 10px;
+  overflow: hidden;
+  zoom: 1;
+  margin-bottom: 1em;
+}
+
+.party .head {
+  margin-bottom: 0;
+}
+
+.politician .head img, .party .head .info {
+  float: left;
+}
+
+.politician .head .info, .party .head .info {
+  float: right;
+}
+
+.politician .head .info, .party .head .info {
+  width: 160px;
+  margin-top: 0;
+}
+
+.politician .head .info p, .party .head .info p {
+  display: table;
+  font-size: 1.2em;
+  margin: -5px 0 0 0;
+  height: 60px;
+  max-width: 155px; }
+
+.politician .head .info p a.perma, .party .head .info p a.perma {
+  display: table-cell;
+  vertical-align: middle; }
+
+.politician .head .info p a.dark-text, .party .head .info p a.dark-text {
+  color: #222;
+}
+
+.politician .head .info p a.light-text, .party .head .info p a.light-text {
+  color: #f5f5f5;
+}
+
+.politician .status, .party .status {
+  color: #666;
+  margin-top: 13px;
+  font-size: 0.8em;
+}
+
+.politician .status div {
+  margin-bottom: .95em;
+  font-size: 1.1em;
+}
+
+.politician .incumbent {
+  font-size: 0.8em;
+  color: #444;
+  margin-left: 15px;
+}
+
+.politician .icons, .party .icons {
+  margin-top: 9px;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.politician .icons a, .party .icons a {
+    text-decoration: none;
+}
+.politician .icons i, .party .icons i {
+  font-size: 1.6em;
+}
+
+.politician .icons > i, .party .icons > i {
+  color: #aaa;
+}
+
+.politician .icons a, .party .icons a, .politician .icons > i, .party .icons > i {
+  float: left;
+  margin-right: 8px;
+}
+
+h2.constituency_header {
+  font-size: 2em;
+}
+
+.icons a i.fa-youtube {
+  color: #ff0000;
+}
+
+.icons a i.fa-facebook {
+  color: #4267b2;
+}
+
+.icons a i.fa-twitter {
+  color: #1da1f2;
+}
+
+.icons a i.fa-instagram {
+  color: #cd486b;
+}
+
+.party .extra {
+  margin-left: 15px;
+  font-size: 0.9em;
+}
+
+.party .extra > div {
+  margin-bottom: 1em;
+}
+
+.politician .qanda, .politician .candidate-party {
+  margin-bottom: 1em;
+  margin-left: 14px;
+  font-size: 14px;
+}
+
+.politician .qanda a {
+  font-weight: bold;
+  animation: color-change 10s infinite;
+}
+
+.politician .qanda {
+  line-height: 1.8em;
+}
+
+.politician .no-qanda {
+  text-align: center;
+  color: #888;
+}
+
+@keyframes color-change {
+  0% {
+   filter: brightness(100%) saturate(100%);
+  }
+  50% {
+   filter: brightness(120%) saturate(130%);
+  }
+  100% {
+   filter: brightness(100%) saturate(100%);
+  }
+}
+
+.politician .qanda a b {
+  color: #2F7C24; /* Green */
+}
+
+.politician .qanda a span {
+  text-decoration: underline;
+}
+
+.politician .minitile, .party .minitile {
+  font-size: 12px;
+  width: 121px;
+  height: 54px;
+  float: left;
+  background: white;
+  border-radius: 5px;
+  margin-left: 13px;
+  margin-bottom: 18px;
+  padding: 8px 0 0 10px;
+}
+
+
+  /*temp*/
+.politician .minitile.long, .party .minitile.long {
+  width: 262px;
+  height: 40px;
+  font-size: 14px;
+}
+
+.minitile i {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 2em;
+  color: #555;
+}
+
+
+.election-website .no-site {
+  color: #999;
+}
+
+.mobile_home {
+  margin: 0 0 30px 11px;
+}
+
+.visible_block_when_mobile {
+	display: none; }
+
+.grey {
+	color: #5a5a5a; }
+
+.grey a {
+    color: #8F9CC3; }
+
+.small {
+	font-size: 0.95em; }
+
+.tiny {
+	font-size: 0.5em; }
+
+.no-left-margin {
+  margin-left: 0;
+}
+
+
+.parties_thumb {
+	overflow: auto;
+	zoom: 1;
+    margin-bottom: -15px;}
+
+  .party_thumb {
+	float: left;
+	margin-right: 33px;
+	margin-bottom: 25px; }
+    .party_thumb p {
+        margin-bottom: 5px;
+    }
+	.party_thumb div img {
+		height: 95px;
+        width: auto; }
+
+.map_nav {
+  border: 3px solid #bbb;
+  border-radius: 10px;
+  padding: 18px;
+  margin-top: 50px;
+}
+
+.map_nav ul {
+  margin-left: 1em;
+}
+
+.home #container #main .page-list ul li .page-article p.pimg {
+  padding-top: 0;
+}
+
+#main {
+	position: relative; }
+
+@media all and (max-width: 959px) {
+	header {
+		height: 100px; }
+	header h1 {
+		font-size: 36px;}
+	header h2 {
+		font-size: 14px; }
+
+	#container {
+		width: 640px; }
+
+	.three_columns {
+		width: 598px; }
+
+	.two_columns_early_shrink {
+		width: 278px; }
+
+	header .menu > ul > li:last-child > a{
+		padding:0 23px 0 15px;}
+
+  .highmap {
+    margin-bottom: 1em;
+  }
+
+  .map_nav {
+    border: none;
+    padding: 0;
+    margin: 0 0 0 0.5em;
+    font-size: 1.5em;
+    width: auto;
+  }
+
+  .map_nav ul li {
+    padding-bottom: 1em;
+  }
+}
+
+@media all and (max-width: 639px) {
+	header {
+    background-image: none;
+		padding-top: 0.5em;
+		height: auto; }
+
+	header h1 {
+		font-size: 2.7em; }
+
+  /* Party thumbnails on separate lines when in mobile mode. */
+  .party_thumb {
+        float: none; }
+
+	.party_thumb div img {
+		height: 150px; }
+
+	#container {
+		width: 320px; }
+
+  .short {
+    height: auto;
+  }
+
+  .one_column, .two_columns, .three_columns, .two_columns_early_shrink {
+    padding-left: 10px;
+  }
+
+  .home #container #main .page-list ul li .page-article p.pimg {
+    padding-top: 5px;
+  }
+
+	.three_columns, .two_columns {
+		width: 278px; }
+
+	.two_column_flow {
+		width: 320px; }
+
+	.visible_block_when_mobile {
+		display: block; }
+	.hidden_block_when_mobile {
+		display: none;  }
+
+	.head-top .header-time{
+		width:100%;
+		padding: 20px 0;
+    	text-align: center;}
+
+	header #menu-trigger{
+		bottom: 7px;
+		}
+
+	#searchform .letterinput{
+		width:calc(100% - 50px);}
+
+	header .menu-tog{
+		display:block;}
+	.head-top .search-form{
+	    position: static;
+		width:100%;
+		margin-top: 25px; }
+	.search-form #searchform{
+		float:left;
+		width: calc(100% - 50px);}
+
+	.home #container #main .page-list ul li, .home #container #main .page-image-icon ul li, .home #container #main .latest-news ul li{
+		width:100%;
+		margin-bottom: 70px;}
+
+	.home #container #main .page-list ul li:nth-child(3n+2),.home #container #main .latest-news ul li:nth-child(3n+2){
+		margin: 0 0 70px 0;}
+
+
+  .home #container #main .page-list ul li .page-article p.excerpt {
+    height: auto;
+    margin-bottom: 0.5em;
+    padding-top: 0;
+  }
+
+	body.home #container #main .page-list ul li a {
+    	font-size: 24px;}
+	.home #main .page-list ul li p{
+		font-size: 16px;}
+
+	#container .latest-news{
+		margin-top:15px;}
+
+  body .head-top {
+    background-image: none !important;
+    height: 125px;
+  }
+
+  /* Footer in the mobile just 2 column in one row*/
+	#footer_left {
+		width: 100%;
+	}
+
+	#footer_center {
+		width: 100%;
+	}
+
+	#footer_right {
+    width: 100%;
+	}
+}
+
+.latest_news_small h4, .latest_news_large h4 {
+  color: #666666; }
+.latest_news_small span.source, .latest_news_large span.source {
+  color: #444444;
+  font-size: 0.8em; }
+.latest_news_small ul, .latest_news_large ul {
+  list-style: none;
+  margin-left: 0; }
+  .latest_news_small ul li, .latest_news_large ul li {
+    border-bottom: 1px solid #dddddd; }
+.latest_news_small p.link, .latest_news_large p.link {
+  margin-bottom: 0; }
+
+.latest_news_small ul, .latest_news_small p.more {
+  font-size: 14px; }
+.latest_news_small ul li {
+  margin-bottom: 5px; }
+.latest_news_small p.date {
+  color: #666666;
+  margin-bottom: 5px;
+  font-size: 11px; }
+.latest_news_small p.mentions {
+  color: #888888;
+  font-size: 12px; }
+.latest_news_small p.link {
+  font-size: 1.1rem;
+}
+
+.latest_news_large ul {
+  font-size: 13px; }
+  .latest_news_large ul li {
+    margin-bottom: 10px; }
+.latest_news_large p.mentions {
+  color: #888888;
+  font-size: 11px; }
+p.mentions {
+  margin-top: 3px;
+}
+p.mentions a {
+  color: #8F9CC3;
+}
+
+
+/* ================================================================
+This copyright notice must be untouched at all times.
+
+The original version of this stylesheet and the associated (x)html
+is available at http://www.cssplay.co.uk/menus/droplist-flyout.html
+Copyright (c) 2005-2010 Stu Nicholls. All rights reserved.
+This stylesheet and the associated (x)html may be modified in any
+way to fit your requirements.
+=================================================================== */
+
+/* this is a CSS answer to fix the hover/focus '~' and hover/focus '+' problem in safari and chrome */
+html {-webkit-animation: safariSelectorFix infinite 1s;}
+@-webkit-keyframes safariSelectorFix {
+0% {zoom:1;}
+100% {zoom:1;}
+}
+
+.menu {
+	height:25px;
+	background:#eee;
+	margin:0 9px 15px 9px;
+	padding-left:20px;
+}
+
+.menu ul {margin:0; padding:0; list-style:none; white-space:nowrap; position:relative;}
+.menu > ul {float:left;}
+
+.menu ul ul {position:absolute; left:-9999px;}
+.menu > ul > li {float:left; display:block; position:relative;}
+
+.menu ul ul {background:rgba(255, 255, 255, 0.95); padding:10px 0; border:1px solid #eee;
+border-top: none;
+}
+
+.menu > ul > li > ul {border-top:0;
+z-index: 2;
+-moz-border-radius: 0 0 5px 5px;
+-webkit-border-radius: 0 0 5px 5px;
+-ms-border-radius: 0 0 5px 5px;
+border-radius: 0 0 5px 5px;
+-o-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+-icab-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+-khtml-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+-moz-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+-webkit-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu a {
+	display:block;
+	font-size: 15px;
+	color:#181719;
+	line-height:25px;
+	text-decoration:none;
+	padding:0 23px 0 15px;
+	font-family: "Libre Franklin", sans-serif;
+}
+.menu > ul > li > a {float:left; color:#2B4270; }
+.menu ul ul li a {line-height:20px;}
+
+.menu ul li:hover > ul {left: auto; right: -0.5em; top:25px;}
+.menu ul ul li:hover > ul {
+  left:100%;
+  top:auto;
+  margin:-31px 0 0 0px;
+  right: unset; /* Needed or the second level menu collapses. */
+  -moz-border-radius: 0 0 5px 5px;
+  -webkit-border-radius: 0 0 5px 5px;
+  -ms-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
+}
+
+.menu li.left:hover > ul {left:auto; right:0; top:25px;}
+.menu li.left ul li:hover > ul {left:auto; right:100%; top:auto; margin:-31px -10px 0 0;}
+
+.menu li.left ul a {text-align:right; padding:0 15px 0 30px;}
+
+.menu li a.fly {background:transparent url(ipad4/arrow.gif) no-repeat right center;}
+.menu li.left ul a.fly {background:transparent url(ipad4/arrowl.gif) no-repeat left center;}
+
+.menu > ul li:hover > a {text-decoration: underline;}
+.menu > ul li:hover > a.nohover {text-decoration: none; cursor: default;}
+.menu ul ul li:hover > a,
+.menu ul ul li:hover > a.fly {background-color:rgba(252, 252, 252, 0.54); color:#000;}
+
+.menu > ul > li.close {display:none; position:absolute; left:0; top:-25px; width:100%; height:25px; background:none;}
+.menu > ul > li.close a {width:100%; padding:0; text-indent:15px; background:#eee; color:#555;
+-moz-border-radius: 5px 5px 0 0;
+-webkit-border-radius: 5px 5px 0 0;
+-ms-border-radius: 5px 5px 0 0;
+border-radius: 5px 5px 0 0;
+border: 1px solid #ddd;
+border-bottom: none;
+font-weight: normal;
+font-size: 11px;
+}
+
+@media all and (max-width: 768px) {
+/* for iPhone, iPod Touch and iPad */
+	.menu ul ul {display:none;}
+	.menu ul li:hover > ul {display:block;}
+	.menu ul li:hover ~ li.close {display:block;}
+
+	.search-form{margin-right: 40px;}
+	.head-top .header-time{bottom:0}
+	body header{background:none;padding:10px 0;}
+
+	header h1{font-size:24px; margin-top: 5px;}
+	header #menu-trigger{display:block;}
+	header .mobile-menu{
+		display: block;
+		position: fixed;
+		right: -320px;
+	    width: 320px;
+	    top: 0;
+	    bottom: 0;
+	    height: auto;
+	    margin-top: 0px;
+	    overflow-x: hidden;
+	    background: rgba(255,255,255,0.95) !important;
+	    z-index: 1;
+	    -webkit-transition: left 0.5s 0s;
+	    -o-transition: left 0.5s 0s;
+	    -moz-transition: left 0.5s 0s;
+	    transition: left 0.5s 0s;
+		margin:0;
+		padding:0;
+	}
+	header .mobile-menu ul {
+	    width: 320px;
+	    float: none;
+	}
+	header .mobile-menu > ul{
+		width: 320px;
+	    text-align: center;
+	    position: relative;
+	    z-index: 10;
+	    left: 0;
+	    top: 0;
+	    margin-left: 0px;
+	    margin-right: 0px;
+	    padding: 0px;
+	    border: none;
+	    min-height: 500px;
+	    -o-box-shadow: 0 0 0 rgba(0,0,0,0);
+	    -icab-box-shadow: 0 0 0 rgba(0,0,0,0);
+	    -khtml-box-shadow: 0 0 0 rgba(0,0,0,0);
+	    -moz-box-shadow: 0 0 0 rgba(0,0,0,0);
+	    -webkit-box-shadow: 0 0 0 rgba(0,0,0,0);
+	    box-shadow: 0 0 0 rgba(0,0,0,0);
+	    background-color: transparent;
+	    text-align: left;
+	    overflow: visible;
+	    -webkit-transition: left 0.5s 0s;
+	    -o-transition: left 0.5s 0s;
+	    -moz-transition: left 0.5s 0s;
+	    transition: left 0.5s 0s;
+    }
+	header .mobile-menu ul li{
+		display: block;
+	    position: static;
+	    width: 320px;
+	    height: 50px;
+	    border-bottom: 1px solid #ddd;
+	}
+	header .mobile-menu ul li a{
+		font-size: 18px;
+	    font-weight: normal;
+	    font-family: Verdana, Geneva, "DejaVu Sans", sans-serif;
+	    display: block;
+	    color: #333;
+	    text-decoration: none;
+	    padding-left: 20px;
+	    line-height: 50px;
+	}
+	header .mobile-menu li.menu-item-has-children > label, header .mobile-menu li.back > label {
+	    display: block;
+	    height: 100%;
+	    cursor: pointer;
+	}
+	header .mobile-menu li.menu-item-has-children > label::after {
+	    float: right;
+	    background-image: url('images/arrow-right.png');
+	}
+	header .mobile-menu li.back > label::after{
+		float: none;
+	    background-image: url('images/arrow-left.png');
+	}
+	header .mobile-menu ul li.menu-item-has-children > label::after, header .mobile-menu li.back > label::after {
+	    content: "";
+	    display: block;
+	    padding-top: 5px;
+	    width: 40px;
+	    height: 40px;
+	    background-size: auto 50%;
+	    background-repeat: no-repeat;
+	    background-position: center;
+	}
+	header .mobile-menu ul li ul.sub-menu {
+	    display: block;
+	    left: 320px;
+	    top: 0px;
+	    background-color: transparent;
+	    -o-box-shadow: 0 0 0 rgba(0,0,0,0);
+	    -icab-box-shadow: 0 0 0 rgba(0,0,0,0);
+	    -khtml-box-shadow: 0 0 0 rgba(0,0,0,0);
+	    -moz-box-shadow: 0 0 0 rgba(0,0,0,0);
+	    -webkit-box-shadow: 0 0 0 rgba(0,0,0,0);
+	    box-shadow: 0 0 0 rgba(0,0,0,0);
+	    border: none;
+	    padding: 0px;
+	    margin: 0px;
+	}
+	header .mobile-menu ul li ul li:hover a {
+	    background: transparent;
+	}
+	header .mobile-menu ul li.back>a {
+	    font-weight: bold;
+	    text-transform: uppercase;
+	    padding-left: 40px;
+	    line-height: 46px;
+	}
+	header .mobile-menu ul > li > a, header .mobile-menu  ul li.back>a {
+	    float: left;
+	    position: relative;
+	}
+	header .mobile-menu  ul li.back>a {
+		z-index: -1;
+	}
+	header .mobile-menu  ul  li ul.sub-menu {
+		background: #fff;
+	    height: auto;
+		min-height:500px;
+	}
+	header .mobile-menu  ul  li ul.sub-menu li .sub-menu{
+		z-index:99;
+	}
+	header .mobile-menu ul li.menu-item-has-children > a{
+		z-index: -1;
+	}
+
+	#menu-toggle:checked ~ .mobile-menu {
+		right:0;
+		box-shadow: 1px 0px 12px rgba(0, 0, 0, 0.1);
+	}
+	#menu-toggle:checked ~ #menu-trigger {
+		right:10px;
+		position: fixed;
+		top:10px;
+	}
+	#menu-toggle:checked ~ #menu-trigger label {
+		background: none;
+	}
+	header .mobile-menu ul li  input[type='checkbox']:checked ~ .sub-menu{
+		left: 0;
+	}
+	header .menu-tog{
+		display:block;
+	}
+
+	#container #main .page-list ul li a{
+		font-size:23px;
+	}
+
+	.news-content span.news-date-time, .news-content p.post-news-mention{font-size:15px;}
+}
+
+ul.issues li {
+    margin-bottom: 1em;
+}
+
+ul.voter {
+    margin-top: -5px;
+}
+
+ul.voter li {
+    margin-bottom: 0.5em;
+}
+
+/* Header and responsive menu */
+.head-top{
+  margin-top: 5px;
+    height: 353px;
+	position: relative;
+}
+.header-time{
+	position: absolute;
+	bottom: 0px;
+	width: 400px;
+	background-color: #A58AAC;
+	background: rgba(161, 136, 163, 0.81);
+	padding: 20px 0 20px 20px;
+}
+.header-time p{
+	font-size: 25px;
+    margin-bottom: 10px;
+    font-family: "Libre Franklin", sans-serif;
+}
+.header-time h2{
+	font-size: 30px;
+    margin-bottom: 0;
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: 300;
+}
+header{
+  width:92%;
+	margin:0 auto;
+	height:auto;
+	padding-left: 0;
+    padding-right: 0;
+    position: relative;
+}
+
+#menu-trigger {
+    position: absolute;
+    right: 0;
+    top: 15px;
+    color: #fff;
+    display: none;
+    z-index: 2;
+	width: 37px;
+    height: 37px;
+    background: url("images/imagesself/menu.png") no-repeat;
+    background-size: 100%;
+}
+
+header .menu{
+	background:none;margin:0;
+}
+header .menu > ul{
+	float:right;
+}
+header .menu > ul > li > a{
+	color:#181719;
+}
+.search-form{
+	overflow: hidden;
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+#searchform{
+	float: right;
+    background: #38303B;
+    padding: 3px;
+	color: #fff;
+	-moz-border-radius:5px;
+	-ms-border-radius:5px;
+	-o-border-radius:5px;
+	border-radius:5px;
+}
+#searchform .letterinput{
+	background: #A48AAC;
+    margin: 0;
+    border: none;
+	padding:7px;
+	font-size:15px;
+	color: #fff;
+}
+input::-webkit-input-placeholder{
+	color: #fff;
+}
+input:-moz-placeholder {
+	color: #fff;
+}
+input::-moz-placeholder {
+	color: #fff;
+}
+input:-ms-input-placeholder {
+	color: #fff
+}
+#searchform .gobutton{
+	background:url("images/imagesself/search.png") no-repeat;
+    background-size: 100% 100%;
+    width: 25px;
+    border: none;
+    height: 25px;
+	cursor: pointer;
+	padding: 7px;
+}
+.menu-tog{
+	float: right;
+    width: 37px;
+    height: 37px;
+    background: url("images/imagesself/menu.png") no-repeat;
+    background-size: 100%;
+	margin: 2px 0 0 13px;
+	display:none;
+}
+
+#menu-trigger label {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+	  width: 100%;
+    height: 100%;
+    -o-border-radius: 0px 5px 5px 0px;
+    -icab-border-radius: 0px 5px 5px 0px;
+    -khtml-border-radius: 0px 5px 5px 0px;
+    -moz-border-radius: 0px 5px 5px 0px;
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-top-left-radius: 0px;
+    -webkit-border-bottom-right-radius: 5px;
+    -webkit-border-bottom-left-radius: 0px;
+    border-radius: 0px 5px 5px 0px;
+}
+#menu-trigger label .icon-bar {
+    display: block;
+    width: 22px;
+    height: 5px;
+    background-color: #333;
+    border-radius: 1px;
+}
+#menu-trigger label .icon-bart {
+    margin-top: 2px;
+}
+.submenu, #menu-toggle{
+	position: absolute;
+	display: none;
+}
+
+.mobile-menu li.menu-item-has-children > label, .mobile-menu li.back > label{
+	display:none;
+}
+
+/* 3W and news */
+.home #container{
+	width:100%;
+	max-width:1200px;}
+.page-list{
+	padding: 30px 0 10px;
+    overflow: hidden;}
+.page-list ul li p{
+	font-size:16px;
+	padding-top:15px;
+	line-height: 20px;}
+.page-list ul li .page-article .ptitle{
+	height:50px;
+	/*overflow:hidden;*/}
+.page-list ul li .page-article p.excerpt{
+	height:75px;
+	overflow:hidden;}
+.page-list ul li h1,.page-list ul li p{
+	margin:0;}
+.page-list ul li a{
+	color:#18181A;
+	font-size: 30px;
+	font-weight: bold;}
+.page-list ul li p.excerpt a {
+  font-size: 16px !important;
+  font-weight: normal;
+}
+.page-image-icon,.latest-news,.news-list{
+	overflow:hidden;}
+.latest-news{
+	margin-top:80px;}
+.page-list ul li,.page-image-icon ul li{
+	list-style:none;
+	width: 31%;
+  float: left;
+  text-align:center;
+  }
+
+.latest-news ul li{
+	list-style:none;
+	width: 31%;
+  float: left;
+}
+
+.latest-news ul li{
+	min-height: 550px;
+}
+.page-list ul li:nth-child(3n+2),.latest-news ul li:nth-child(3n+2){
+	margin:0 3.5%;}
+.page-list ul li img{
+	width:auto;
+	height:100px;}
+.head-title{
+	text-align: center;
+    margin-bottom: 50px;
+    font-size: 30px;
+	font-weight: 600;
+	}
+.news-content .news-title,.news-content .news-date-time{
+	width:100%;
+	display: inline-block;}
+.news-content .post-news-title-time{
+    overflow: hidden;
+    border-bottom: 2px solid #B7B7B7;
+		margin-top: 30px;
+}
+.news-content .news-title{
+    font-size: 20px;
+    color: #18181A;
+    margin: 10px 0 10px 0;
+	font-weight: bold;
+}
+
+.news-content {
+  max-height: 130px;
+}
+
+.news-title {
+  height: 70px;
+}
+.news-content .news-date-time{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size:14px;
+	font-weight: 500;}
+.news-content p{
+	/*margin: 0;*/
+    padding-top: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    line-height: 20px;
+	text-align: left;}
+.news-content p.post-news-mention{
+	max-height:100px;
+	overflow:hidden;}
+.news-content p a.post-news-more{
+		width: 100%;
+    display: inline-block;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+		bottom:40px;
+		left:0;
+	}
+
+.post-news-summary{
+	height: 260px;
+	overflow: hidden;
+}
+.view-all{
+	margin:25px 0;
+	overflow:hidden;}
+.view-all-lt,.view-all-rt{
+	width: calc((100% - 115px) /2);
+    height: 2px;
+    background: #B7B7B7;
+    float: left;
+	margin-top: 8px;
+}
+.view-all-con{
+	float: left;
+	font-size: 14px;
+    padding: 0 23px;}
+header .menu > ul > li:last-child > a{
+	padding:0 0 0 15px;}
+
+@media all and (max-width: 1200px) {
+	.home #main{
+		padding:0 4%;}
+  .home footer {
+    padding-left: 5%;
+  }
+
+}
+@media all and (max-width: 1024px) {
+	.head-top .header-time{
+		bottom:0;}
+	#main .page-list ul li a{
+		font-size:23px;}
+
+	.latest-news ul li{
+		min-height: 580px;
+	}
+}
+
+@media all and (max-width: 825px) {
+
+	footer p{
+			font-size: 15px;
+	}
+	#container #main .page-list ul li a{
+		font-size:20px;}
+
+	.latest-news ul li{
+		min-height: 720px;}
+
+	.news-content .post-news-title-time{
+   		min-height: 200px;}
+
+}
+
+
+@media all and (max-width: 768px){
+	.latest-news ul li{
+		min-height: 760px;}
+
+	.news-content .post-news-title-time{
+		min-height: 190px;}
+
+	.news-content p.post-news-mention{
+		max-height: 180px;}
+}
+
+
+@media all and (max-width: 736px){
+
+	.news-content .news-title{
+	    font-size: 18px;
+	    color: #18181A;
+	    margin: 10px 0 10px 0;
+	}
+
+	.head-title{
+		text-align: center;
+	    margin-bottom: 50px;
+	    font-size: 36px;
+		font-weight: 600;}
+
+	.latest-news ul li{
+		min-height: 780px;}
+
+	.news-content .post-news-title-time{
+		min-height: 190px;}
+
+}
+@media all and (max-width: 668px) {
+
+
+	#container #main .page-list ul li a{
+		font-size:18px;}
+	.page-list ul li p{
+		font-size: 14px;
+	}
+
+
+	/*.page-list ul li .page-article .ptitle{
+	height:55px;}*/
+
+	.news-content .post-news-title-time{
+		min-height: 200px;}
+
+	.latest-news ul li{
+		min-height: 850px;}
+
+	.news-content p.post-news-mention{font-size:14px;}
+}
+
+@media all and (max-width: 639px){
+	.news-content .post-news-title-time{
+		min-height: 120px;
+		margin-top: 10px;}
+
+	.latest-news ul li{
+		min-height: 600px;}
+
+	footer p{
+			font-size: 16px;
+	}
+}
+
+@media all and (max-width: 569px){
+	.latest-news ul li{
+		min-height: 0;}
+
+	.news-content .post-news-title-time{
+		min-height: 0;}
+
+	.news-content span.news-date-time{
+		margin-bottom: 20px;
+	}
+
+	.post-news-summary{max-height: 999px;}
+
+}
+
+@media all and (max-width: 376px) {
+  header h1 {
+    font-size: 20px;
+  }
+  header h2 {
+    font-size: 12px;
+  }
+}
+
+/* who-page */
+
+.mini_maps {
+  margin-top: 30px;
+}
+
+.mini_maps h4 {
+  text-align: center;
+  font-weight: normal;
+  font-size: 1.5em;
+}
+
+.mini_maps a.map {
+  display: block;
+  width: 102px;
+  margin: 0 auto;
+}
+
+
+
+.float_left {
+	float: left;
+	width: 288px;
+	padding-bottom: 15px;
+	text-align: center;
+}
+
+.new_politician {
+	-o-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+	-icab-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+	-khtml-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+	box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+	position: relative;
+	top: 0;
+	right: 0;
+	width: 100px;
+    height: 100px;
+    overflow: hidden;
+
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+
+}
+
+
+.election_table {
+	margin: auto;
+}
+
+.election_th {
+	padding-left: 3px;
+	padding-right: 2px;
+	padding-bottom: 3px;
+	text-align: center;
+}
+
+.election_tr {
+	border: 1px solid #BBBBBB;
+}
+
+.election_td {
+	border: 1px solid #BBBBBB;
+	padding: 2px 2px 2px 5px;
+	text-align: center;
+}
+
+/* Address Lookup Tool */
+
+.search_text{
+	margin-left:-20px;
+	margin-top:75px;
+}
+
+.search_text .enter_address_text{
+	color: #181719;
+	font-size: 30px;
+	font-weight: bold;
+	line-height: 36px;
+}
+
+.search_text .random_order_text{
+	color: #181719;
+	font-size: 18px;
+	font-style: italic;
+	line-height: 30px;
+}
+
+#address_lookup_form{
+	width:60%;
+	margin-left:40%;
+	margin-bottom:25px;
+  background: #38303B;
+  padding: 5px;
+	color: #fff;
+	-moz-border-radius:5px;
+	-ms-border-radius:5px;
+	-o-border-radius:5px;
+	border-radius:5px;
+}
+
+input::-webkit-input-placeholder{
+	color: #fff;
+}
+input:-moz-placeholder {
+	color: #fff;
+}
+input::-moz-placeholder {
+	color: #fff;
+}
+input:-ms-input-placeholder {
+	color: #fff
+}
+
+#address_lookup_form #submit{
+	background-color: inherit;
+  border: none;
+	cursor: pointer;
+	padding: 7px;
+	color: #FFFFFF;
+	font-weight: 400;
+	font-size:15px;
+	font-family: "Libre Franklin", sans-serif;
+	font-style: italic;
+}
+
+#address_lookup_form #street_number,#address_lookup_form #street_name{
+	border: none;
+	color: #FFFFFF;
+	font-size: 16px;
+	line-height: 0;
+	background: #A48AAC;
+	padding:3px;
+	border-radius: 3px;
+	font-family: "Libre Franklin", sans-serif;
+	font-style: italic;
+}
+
+#address_lookup_form #street_number {
+	height: 25px;
+	width: 40%;
+	margin-right:2px;
+}
+
+#address_lookup_form #street_name{
+	height: 25px;	width: 45%; 	margin-right:2px;
+}
+
+#address_lookup_form #submit{
+	margin-left:4px;
+}
+
+@media all and (max-width: 1200px) {
+
+	#address_lookup_form{
+		width:70%;
+		margin:25px auto;
+	}
+
+	#address_lookup_form #street_number {
+		height: 25px;
+		width: 40%;
+		margin-right:2px;
+	}
+
+	#address_lookup_form #street_name{
+		height: 25px;	width: 45%; 	margin-right:2px;
+	}
+
+	#address_lookup_form #submit{
+		margin-left:4px;
+	}
+}
+
+@media all and (max-width: 1024px){
+	/* iPad / iPad Pro Standing Position */
+	.search_text{
+		margin-top:75px;
+		margin-left: 50px;
+	}
+
+	#address_lookup_form{
+		width:60%;
+		margin:25px auto;
+	}
+
+	#address_lookup_form #street_number {
+		height: 25px;
+		width: 40%;
+		margin-right:2px;
+	}
+
+	#address_lookup_form #street_name{
+		height: 25px;	width: 45%; 	margin-right:2px;
+	}
+
+	#address_lookup_form #submit{
+		margin-left:4px;
+	}
+}
+
+@media all and (max-width: 823px){
+	/* iPhone X Sitting, Pixel 2Xl Sitting */
+	#address_lookup_form{
+		width:90%;
+		margin:25px auto;
+	}
+}
+
+@media all and (max-width: 768px) {
+  /*
+	#container {
+		  width: 90%;
+		  margin: 0 auto;
+	}
+  */
+
+	.search_text{
+		margin-top:75px;
+		margin-left: 50px;
+	}
+
+	#address_lookup_form{
+		width:70%;
+		margin:25px auto;
+	}
+
+	#address_lookup_form #street_number {
+		height: 25px;
+		width: 40%;
+		margin-right:2px;
+	}
+
+	#address_lookup_form #street_name{
+		height: 25px;	width: 45%; 	margin-right:2px;
+	}
+
+	#address_lookup_form #submit{
+		margin-left:4px;
+	}
+
+}
+
+@media all and (max-width: 668px){
+	/* iPhone 6/7/8 Sitting Position, Galaxy S5 Sitting Position*/
+/*
+	#container {
+		  width: 90%;
+		  margin: 0 auto;
+	}
+  */
+
+	.search_text{
+		margin-left:5px;
+		margin-top:75px;
+	}
+
+	#address_lookup_form{
+		width:95%;
+		margin:25px auto;
+	}
+
+	#address_lookup_form #street_number {
+		height: 25px;
+		width: 40%;
+		margin-right:2px;
+	}
+
+	#address_lookup_form #street_name{
+		height: 25px;	width: 45%; 	margin-right:2px;
+	}
+
+	#address_lookup_form #submit{
+		margin-left:4px;
+	}
+
+}
+
+@media all and (max-width: 414px){
+	/* Pixel 2/ 2Xl, iPhone 6/7/8 Plus */
+  /*
+	#container {
+		  width: 90%;
+		  margin: 0 auto;
+	}
+  */
+
+	.search_text{
+		margin-left:5px;
+		margin-top:75px;
+	}
+
+	#address_lookup_form{
+		width:95%;
+		margin:25px auto;
+	}
+
+	#address_lookup_form #street_number {
+		height: 25px;
+		width: 35%;
+		margin-right:2px;
+	}
+
+	#address_lookup_form #street_name{
+		height: 25px;	width: 40%; 	margin-right:2px;
+	}
+
+	#address_lookup_form #submit{
+		margin-left:4px;
+	}
+
+}
+
+@media all and (max-width: 375px){
+	/* iPhone 6/7/8/X, Galaxy S5,  */
+  /*
+	#container {
+		  width: 90%;
+		  margin: 0 auto;
+	}
+  */
+
+	.search_text{
+		margin-left:5px;
+		margin-top:75px;
+	}
+
+	#address_lookup_form{
+		width:95%;
+		margin:25px auto;
+	}
+
+	#address_lookup_form #street_number {
+		height: 25px;
+		width: 35%;
+		margin-right:2px;
+	}
+
+	#address_lookup_form #street_name{
+		height: 25px;	width: 40%; 	margin-right:2px;
+	}
+
+	#address_lookup_form #submit{
+		margin-left:4px;
+	}
+}
+
+@media all and (max-width: 320px){
+	/* iPhone 5/SE */
+
+  /*
+	#container {
+		  width: 90%;
+		  margin: 0 auto;
+	}
+  */
+
+	.search_text{
+		margin-left:5px;
+		margin-top:75px;
+	}
+
+	#address_lookup_form{
+		width:95%;
+		margin:25px auto;
+	}
+
+	#address_lookup_form #street_number {
+		height: 25px;
+		width: 35%;
+		margin-right:2px;
+	}
+
+	#address_lookup_form #street_name{
+		height: 25px;	width: 40%; 	margin-right:2px;
+	}
+
+	#address_lookup_form #submit{
+		margin-left:4px;
+	}
+}
+
+.search_candidates_text > h2{
+	letter-spacing: 2px;
+	text-align:center;
+	margin:25px auto;
+}
+
+
+
+.address_suggestions{
+	border: 1px black solid;
+	border-radius: 5px;
+	margin:30px;
+	padding:10px;
+	float: left;
+	cursor:pointer;
+}
+
+.loading{
+	margin:auto;
+	width:80%;
+	display:none;
+}
+
+.gif{
+	display:block;
+	margin:0 auto;
+}
+
+/* End of Address Lookup Tool */
+
+/* Margin between Candidate Image and name on the constituencies candidate*/
+.name{
+	margin-top: 10px;
+}
+
+.news-content p.post-news-mention a:hover{
+	text-decoration: underline;
+}
+
+#static_page h2 {
+  margin-top: 2em;
+}
+
+#static_page h3 {
+  margin-top: 1.5em;
+}
+
+#static_page p {
+  line-height: 1.8;
+}
+
+#static_page ul, #static_page ol {
+  margin: 0 0 1em 2em;
+  line-height: 1.8;
+}
+
+#static_page ol {
+  margin-left: 3em;
+}
+
+#static_page .calendar {
+  width: 100%;
+}
+
+.fancy-news {
+  min-height: 370px;
+}
+
+.fancy-news a.news-title {
+  display: block;
+  display: -webkit-box;
+  font-size: 1.3em;
+  height: 5em;
+  line-height: 1.2;
+  color: #333;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.fancy-news .news-title-time {
+  border-bottom: 1px solid grey;
+  margin-bottom: 1em;
+  padding-bottom: 0.5em;
+}
+
+.fancy-news .news-date-time, .fancy-news .news-mention {
+  font-size: 0.9em;
+  color: #777;
+}
+
+.fancy-news .news-summary {
+  display: -webkit-box;
+  -webkit-line-clamp: 9;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 165px;
+  margin-bottom: 2em;
+}
+
+.fancy-news .news-title-time, .fancy-news .news-summary, .fancy-news .news-mention {
+  margin-right: 10px;
+}
+
+.fancy_news .news-mention {
+  margin-bottom: 20px;
+}
+
+#submit_answers {
+  border-radius: 4px;
+  background: #0085ba;
+  border-color: #006799;
+  color: #fff;
+  font-size: 17px;
+}
+
+#submit_answers:hover {
+  background: #008ec2;
+  border-color: #0073aa;
+  cursor: pointer;
+}
+
+div.issues {
+  margin-top: 3em;
+}
+
+div.issues div {
+  margin-bottom: 2.5em;
+}
+
+div.issues div p {
+  margin-bottom: 0.1em;
+}
+
+table.results {
+	margin:20px;
+	border:#ccc 1px solid;
+	border-radius:3px;
+	box-shadow: 0 1px 2px #d1d1d1;
+}
+
+table.results tr th { background: #F1F1F1; }
+
+table.results td {
+  padding: 20px 20px 0 20px;
+}
+
+table.results tr:last-child td {
+  padding-bottom: 20px;
+}
+
+table.results th {
+  padding: 20px
+}
+
+table.results tr.bold { font-weight: bold; color: #222; }
+
+@media (max-width: 639px) {
+  table.results th {
+    padding: 15px 3px 15px 3px;
+  }
+
+  table.results td {
+    padding: 20px 8px 0 8px;
+  }
+}
+
+/* Front Page Party Logos and Constituency Maps */
+h2.front-constituency-header, h2.front-party-logos-header {
+  margin-left: 0;
+  margin-bottom: 1em;
+  margin-top: 3em;
+  font-size: 1.8em;
+}
+
+.front-constituency-maps, .front-party-logos {
+  margin-top: 2em;
+}
+
+@media (max-width: 639px) {
+  h2.front-constituency-header {
+    margin-top: 0;
+  }
+}
+
+/* Hack to add top margin when following a #fragment link to this header. */
+h2.front-constituency-header::before {
+  display: block;
+  content: " ";
+  height: 20px;
+}
+
+.front-tiles > div,
+.front-constituency-maps > div,
+.front-party-logos > div {
+  /* Inline and margin for now grid browsers. */
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border: 6px solid #ececec;
+  border-radius: 20px;
+  padding: 10px 20px 15px 20px;
+  /* horizontally align the name of the party or constituency. */
+  text-align: center;
+}
+
+.front-constituency-maps {
+  margin-bottom: 2rem;
+}
+
+.front-constituency-maps div > p,
+.front-party-logos div > p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Switch to a relative block to vert/horz allign the child image. */
+.front-constituency-maps div > a, .front-party-logos div > a {
+  display: block;
+  position: relative;
+}
+
+.front-constituency-maps div > h3 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+
+.front-constituency-maps div > a {
+  height: 220px;
+}
+
+.front-party-logos div > a {
+  height: 110px;
+}
+
+#address-lookup-widget {
+  margin-bottom: 2rem;
+  border: 6px solid #ececec;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+#address-lookup-widget h3, #address-lookup-widget p {
+  margin-left: 0;
+}
+
+#address-lookup-widget sub {
+  display: block;
+  margin-top: 0.4rem;
+  color: #555;
+  font-style: italic;
+}
+
+h2.no-party-front-page-header {
+  font-size: 2rem;
+  color: #183153;
+}
+
+.front-tiles h1 {
+  margin-top: 1.5rem;
+}
+
+.front-tiles h1 a {
+  /* color: #183153; */
+}
+
+.front-tiles > div.tile {
+  padding-bottom: 0.5rem;
+}
+
+h2.front-tile-head {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #183153;
+}
+
+.front-tiles p.description {
+  font-size: 15px;
+  line-height: 1.25rem;
+  height: 3.5rem;
+}
+
+.front-tiles p.description a {
+  color: #183153;
+}
+
+.front-tiles h1 a:hover,
+.front-constituency-maps div > h3 a:hover,
+.front-constituency-maps div > p a:hover,
+.front-tiles p.description a:hover {
+  text-decoration: underline;
+  color: #3b59bb;
+}
+
+/* Vertically and horizontally allign the images. */
+.front-constituency-maps div > a > img, .front-party-logos > div > a > img {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
+/* Grid things up. Assumes a map width of 150px and a logo with of 100px. */
+@supports (display: grid) {
+  .front-tiles > div,
+  .front-constituency-maps > div,
+  .front-party-logos > div {
+    margin: 0;
+  }
+
+  .front-tiles,
+  .front-constituency-maps,
+  .front-party-logos {
+    display: grid;
+    grid-gap: 20px;
+  }
+
+  .front-tiles { /* width plus 2x padding. */
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  }
+
+  .front-constituency-maps { /* width plus 2x padding. */
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  }
+
+  .front-party-logos { /* width plus 2x padding. */
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  }
+
+}
+
+/* Space above the explanatory text. */
+.front-party-logos {
+  margin-bottom: 2em;
+}
+
+.front-info h2 {
+  font-size: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  margin-left: 0;
+}
+
+.front-info p, .front-info li {
+  font-size: 18px;
+  line-height: 1.4;
+  margin-left: 0;
+}
+
+.front-info ul {
+  margin-left: 2rem;
+}
+
+div.questionnaire {
+  font-size: 1.1em;
+  line-height: 1.45;
+}
